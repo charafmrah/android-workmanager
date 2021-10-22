@@ -4,13 +4,6 @@ WorkManager Codelab
 This repository contains the code for the
 [WorkManager Codelab](https://codelabs.developers.google.com/codelabs/android-workmanager):
 
-Java version
---------------
-
-The Java version of this codelab is available under the
-[`Java`](https://github.com/googlecodelabs/android-workmanager/tree/java) branch of this
-repository.
-
 Introduction
 ------------
 
@@ -24,25 +17,6 @@ that need guaranteed execution. You can learn more by reading the
 [WorkManager Reference](https://developer.android.com/reference/androidx/work/package-summary)
 or doing the
 [WorkManager Codelab](https://codelabs.developers.google.com/codelabs/android-workmanager).
-
-Pre-requisites
---------------
-
-* Android Studio 3.6 or later and you know how to use it.
-
-* Make sure Android Studio is updated, as well as your SDK and Gradle.
-Otherwise, you may have to wait for a while until all the updates are done.
-
-* A device or emulator that runs API level 16+
-
-You need to be solidly familiar with the Kotlin programming language,
-object-oriented design concepts, and Android Development Fundamentals.
-In particular:
-
-* Basic layouts, widgets and [View Bindings](https://d.android.com/topic/libraries/view-binding)
-* Some familiarity with Uris and File I/O
-* Familiarity with [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
-  and [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel)
 
 Getting Started
 ---------------
