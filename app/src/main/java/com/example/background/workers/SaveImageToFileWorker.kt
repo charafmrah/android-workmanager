@@ -43,7 +43,7 @@ class SaveImageToFileWorker(ctx: Context, params: WorkerParameters) : Worker(ctx
 
                 Result.success(output)
             } else {
-                Log.e(TAG, "Writing to MediaStore failed")
+                Log.e(TAG, "Writing to MediaStore failed!")
                 Result.failure()
             }
         } catch (exception: Exception) {
