@@ -17,6 +17,7 @@ import java.util.Locale
  * Saves the image to a permanent file
  */
 private const val TAG = "SaveImageToFileWorker"
+
 class SaveImageToFileWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params) {
 
     private val title = "Blurred Image"
@@ -35,15 +36,18 @@ class SaveImageToFileWorker(ctx: Context, params: WorkerParameters) : Worker(ctx
         return try {
             val resourceUri = inputData.getString(KEY_IMAGE_URI)
             val bitmap = BitmapFactory.decodeStream(
-                resolver.openInputStream(Uri.parse(resourceUri)))
+                resolver.openInputStream(Uri.parse(resourceUri))
+            )
             val imageUrl = MediaStore.Images.Media.insertImage(
-                resolver, bitmap, title, dateFormatter.format(Date()))
+                resolver, bitmap, title, dateFormatter.format(Date())
+            )
             if (!imageUrl.isNullOrEmpty()) {
                 val output = workDataOf(KEY_IMAGE_URI to imageUrl)
-
+ 
                 Result.success(output)
             } else {
                 Log.e(TAG, "Writing to MediaStore failed!")
+
                 Result.failure()
             }
         } catch (exception: Exception) {
