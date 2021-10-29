@@ -23,13 +23,9 @@ class BlurWorker(ctx: Context, params: WorkerParameters) : Worker(ctx, params) {
 
         sleep()
 
-        // ADD THIS TO SLOW DOWN THE WORKER
-        sleep()
-        // ^^^^
-
         return try {
             if (TextUtils.isEmpty(resourceUri)) {
-                Log.d(TAG, "Invalid input uri")
+                Log.e(TAG, "Invalid input uri")
                 throw IllegalArgumentException("Invalid input uri")
             }
 
